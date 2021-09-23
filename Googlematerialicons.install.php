@@ -13,6 +13,10 @@ class PluginGooglematerialicons_install extends ContainerFactoryModulInstall_abs
         $this->setEvent('/Core/Index/Header',
                         'PluginGooglematerialicons_event',
                         'setHeader');
+
+        $this->setEvent('/Core/Index',
+                        'PluginGooglematerialicons_event',
+                        'setTemplateFunction');
     }
 
     public function uninstall(): void
